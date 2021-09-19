@@ -1,0 +1,106 @@
+<div class="container">
+    <form [formGroup]="userForm">
+        <div class="container">
+            <div class="row">
+                <div class="row pt-4 mt-4" formGroupName="name">
+                    <div class="col-md-6">
+                        <div>
+                            <label for="firstname">Title:</label>
+                            <input type="text" class="form-control" formControlName="title">
+                        </div>
+                        <div *ngIf="formSubmit && f.name['controls'].title.errors" class="alert alert-danger">
+                            Title is required
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label for="firstname">First name:</label>
+                            <input type="text" class="form-control" formControlName="first">
+                        </div>
+                        <div *ngIf="formSubmit && f.name['controls'].first.errors" class="alert alert-danger">
+                            First name is required
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label for="lastname">Last name:</label>
+                            <input type="text" class="form-control" formControlName="last">
+                        </div>
+                        <div *ngIf="formSubmit && f.name['controls'].last.errors" class="alert alert-danger">
+                            Last name is required
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-md-6">
+                        <div>
+                            <label for="email">Email Id:</label>
+                            <input type="email" class="form-control" formControlName="email">
+                        </div>
+                        <div *ngIf="formSubmit && f.email.errors" class="alert alert-danger">
+                            Email is required
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label for="tel">Phone:</label>
+                            <input type="tel" class="form-control" formControlName="phone">
+                        </div>
+                        <div *ngIf="formSubmit && f.phone.errors" class="alert alert-danger">
+                            Phone is required
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-md-6">
+                        <div>
+                            <label for="dob">DOB:</label>
+                            <input type="tel" class="form-control" formControlName="dob">
+                        </div>
+                        <div *ngIf="formSubmit && f.dob.errors" class="alert alert-danger">
+                            DOB is required
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label for="gender">Gender:</label><br>
+                            <input type="radio" name="gender" formControlName="gender" value="male"> Male
+                            <input type="radio" name="gender" formControlName="gender" value="Female"> Female
+                            <input type="radio" name="gender" formControlName="gender" value="others"> Prefer not to say
+                        </div>
+                        <div *ngIf="formSubmit && f.gender.errors" class="alert alert-danger">
+                            Gender is required
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-md-6">
+                        <div>
+                            <label for="email">Username:</label>
+                            <input type="email" class="form-control" formControlName="username" required>
+                        </div>
+                        <div *ngIf="formSubmit && f.username.errors" class="alert alert-danger">
+                            Username is required
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <label for="tel">Password:</label>
+                            <input type="password" class="form-control" formControlName="password" required>
+
+                        </div>
+                        <div *ngIf="formSubmit && f.password.errors" class="alert alert-danger">
+                            Password is required
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row pt-4 float-right">
+                    <button type="submit" class="btn btn-primary" (click)="Submit()">Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</div>

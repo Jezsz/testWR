@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.is-invalid{
+border-bottom: solid 1px red;
+}
+.alert-danger{
+color: red;
+font-size: 0.8rem;
+}
+input{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}

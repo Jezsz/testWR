@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="Heading"><b>UserList</b></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4" class="text-center">
+            <button class="btn btn-primary" (click)="CreateUser()">
+                Add New User
+            </button>
+        </div>
+        <div class="col-4" style="float: right;">
+           
+            <input type="text" placeholder="Search">
+            <br>
+        </div>
+    </div>
+    <br>
+
+    <div class="row mt-2 ml-4">
+        <div class="col-12 col-lg-2 col-md-2 col-sm-2"></div>
+        <div class="col-12 col-lg-8 col-md-8 col-sm-8">
+            <table>
+                <tr>
+                    <th>Sl.No</th>
+                    <th>Title</th>
+                    <th>Full name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>Contact</th>
+                </tr>
+                <tr *ngFor="let user of userList;;let i=index;">
+
+                    <td>{{i+1}}</td>
+                    <td>{{user.user.name.title}}</td>
+                    <td>{{user.user.name.first}} {{user.user.name.last}}</td>
+                    <td>{{user.user.email}}</td>
+                    <td>{{user.user.gender}}</td>
+                    <td>{{user.user.dob}}</td>
+                    <td>{{user.user.phone}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+<!-- <router-outlet></router-outlet> -->
+<!-- <ng-template #createUser>
+    <app-create-user [(show)]="show"></app-create-user>
+    
+</ng-template> -->
