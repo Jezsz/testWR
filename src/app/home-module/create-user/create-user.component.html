@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="row pt-4 mt-4" formGroupName="name">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div>
                             <label for="firstname">Title:</label>
                             <input type="text" class="form-control" formControlName="title">
@@ -12,7 +12,7 @@
                             Title is required
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div>
                             <label for="firstname">First name:</label>
                             <input type="text" class="form-control" formControlName="first">
@@ -21,7 +21,7 @@
                             First name is required
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div>
                             <label for="lastname">Last name:</label>
                             <input type="text" class="form-control" formControlName="last">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="row pt-2">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div>
                             <label for="email">Email Id:</label>
                             <input type="email" class="form-control" formControlName="email">
@@ -41,7 +41,7 @@
                             Email is required
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div>
                             <label for="tel">Phone:</label>
                             <input type="tel" class="form-control" formControlName="phone">
@@ -50,9 +50,7 @@
                             Phone is required
                         </div>
                     </div>
-                </div>
-                <div class="row pt-2">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div>
                             <label for="dob">DOB:</label>
                             <input type="tel" class="form-control" formControlName="dob">
@@ -61,17 +59,18 @@
                             DOB is required
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div>
-                            <label for="gender">Gender:</label><br>
-                            <input type="radio" name="gender" formControlName="gender" value="male"> Male
-                            <input type="radio" name="gender" formControlName="gender" value="Female"> Female
-                            <input type="radio" name="gender" formControlName="gender" value="others"> Prefer not to say
-                        </div>
+                </div>
+                <div class="pt-2">
+                    <!-- <div class="col-md-4"> -->
+                        <label for="gender">Gender:</label><br>
+                        <input type="radio" name="gender" formControlName="gender" value="male"> Male
+                        <input type="radio" name="gender" formControlName="gender" value="Female"> Female
+                        <input type="radio" name="gender" formControlName="gender" value="others"> Prefer not to say
+
                         <div *ngIf="formSubmit && f.gender.errors" class="alert alert-danger">
                             Gender is required
                         </div>
-                    </div>
+                    <!-- </div------------------gh> -->
                 </div>
                 <div class="row pt-2">
                     <div class="col-md-6">
@@ -95,9 +94,10 @@
                     </div>
                 </div>
 
-                <div class="row pt-4 float-right">
-                    <button type="submit" class="btn btn-primary" (click)="Submit()">Submit</button>
-                </div>
+
+            </div>
+            <div class="row pt-4 ">
+                <button type="submit" class="btn btn-primary" (click)="Submit()">Submit</button>
             </div>
         </div>
 
